@@ -1,14 +1,14 @@
 # the_game_of_life
 
 This is an implementation of [Conway's game of](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) life in [Funk](https://github.com/diegovalverde/funk).
-
-![](screenshots/pentadecatlon.gif)
-
+<p align="center">
+    <img src="screenshots/pentadecatlon.gif">
+</p>
 To build:
 
 Make sure you get the Funk toolchain from [here](https://github.com/diegovalverde/funk).
 
-```python <path_to_your_funk>/funk.py game_of_life.f --include <path_to_your_funk>/include```
+```python <path_to_your_funk>/funky.py game_of_life.f --include <path_to_your_funk>/include```
 
 The code to generate the examples looks like this:
 

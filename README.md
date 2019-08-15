@@ -3,8 +3,9 @@
 This is an implementation of [Conway's game of](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) life in [Funk](https://github.com/diegovalverde/funk).
 <p align="center">
     <img src="screenshots/pentadecatlon.gif">
-        <img src="screenshots/simple.gif">
-     <img src="screenshots/pulsar.gif">
+    <img src="screenshots/pulsar.gif">
+    <img src="screenshots/toad.gif">
+    <img src="screenshots/simple.gif">
 </p>
 To build:
 
@@ -32,13 +33,13 @@ update_cell(_, _ ): 0.
 update_board(_, _, _, k, w, h | k = (w*h)): [].
 # Special condition for the last few cells
 update_board(tr, mr, br, k, w, h | k >= (w*(h-1))):
-    idem(0) ~>[ update_board(tr, mr, br, k+1, w, h)].
+    0 ~>[ update_board(tr, mr, br, k+1, w, h)].
 # ignore first colums as well as first and last rows
 update_board(tr, mr, br, k, w, h | (k / w) = 0 \/ k % w = 0 \/ (k / w) = (w-1) ):
-    idem(0) ~>[ update_board(tr, mr, br, k + 1, w, h)].
+    0 ~>[ update_board(tr, mr, br, k + 1, w, h)].
  # ignore the last column
  update_board(a <~ [tr], b <~ [mr], c <~ [br],k ,w, h| k % w = (w-1)):
-    idem(0) ~>[ update_board(nth(tr,1), nth(mr,1), nth(br,1), k+1, w, h)].
+    0 ~>[ update_board(nth(tr,1), nth(mr,1), nth(br,1), k+1, w, h)].
  # count neighbours around cell 'mr' and move sliding rectangle to the left
  update_board(a <~ [tr], b <~ [mr], c <~ [br],k,w,h):
     cnt <- a + b + c + br + tr + nth(tr,1) + nth(mr, 1) + nth(br,1)

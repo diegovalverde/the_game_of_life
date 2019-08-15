@@ -3,6 +3,7 @@
 This is an implementation of [Conway's game of](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) life in [Funk](https://github.com/diegovalverde/funk).
 <p align="center">
     <img src="screenshots/pentadecatlon.gif">
+     <img src="screenshots/pulsar.gif">
 </p>
 To build:
 
